@@ -58,6 +58,7 @@ html {
     justify-content: end;
     padding: 15px 40px 10px 10px;
     color: black;
+    font-weight: bold;
 
 }
 .little-acc img {
@@ -74,6 +75,7 @@ html {
     gap: 10px;
     justify-content: start;
     padding: 15px 10px 10px 40px;
+    font-weight: bold;
     color: black;
 }
 .profile-info img {
@@ -89,7 +91,6 @@ html {
 }
 .buttons > div {
     display: flex;
-    
     gap: 20px;
     justify-content: end;
     padding: 27px 40px 20px 10px;
@@ -106,7 +107,6 @@ html {
 }
 .buttons button:hover {
     color: white;
-    font-weight:normal !important;
     font-size: small;
     width: 90px;
     padding: 10px 20px;
@@ -125,14 +125,18 @@ html {
     grid-row: 1/4;
     grid-template-rows: repeat(10, 1fr);
 }
+.sidebar > div:hover {
+    font-size: 18px;
+    cursor: pointer;
+}
 .sidebar > div {
     padding: 5px;
 }
-
 /* Main */
 /* Cards */
 .main {
     background-color: #e2e8f0;
+    box-shadow: inset 0 4px 13px -7px rgba(0, 0, 0, 0.5) !important;
     grid-row: 2/4;
     height: 100%; 
     display: grid;
@@ -146,6 +150,7 @@ html {
     
 }
 .cards {
+    overflow: hidden;
     font-size: smaller;
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -156,7 +161,7 @@ html {
     align-self: center;
     justify-self: center;
     padding: 15px 20px;
-    background-color: #fff;
+    background: linear-gradient(to right, #ffb428 2%, white 2%);
     border-radius: 10px;
 }
 .cards:hover {
@@ -180,6 +185,46 @@ html {
 }
 
 /* Announcements & Trending */
+.announce-trend-container {
+    display: grid;
+    
+}
+.announcements {
+    height: 90%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px
+}
+.announcements:hover {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.4);
+}
+.announcements > h6, p {
+    margin: 0;
+    margin-bottom: 7px;
+    font-size: x-small;
+}
+.trending-users {
+    display: flex;
+    gap: 10px;
+    align-items: center;    
+    justify-content: start;
+    color: black;
+    padding-top: 10px;
+}
+.trending-users > img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.trending-users > span, h6 {
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: x-small;
+}
 
 .logo {
     display: flex;
